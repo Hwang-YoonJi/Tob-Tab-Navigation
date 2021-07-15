@@ -35,7 +35,7 @@ export default function App() {
       <Tab.Navigator tabBarOptions={{ 
         labelStyle: { fontSize: 12 }, 
         tabStyle: { height : 50 }, 
-        style: { backgroundColor: '#e6ceff' },
+        style: { backgroundColor: '#e6ceff', marginTop: 20 },
         }}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
