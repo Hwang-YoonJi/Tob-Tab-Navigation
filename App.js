@@ -5,16 +5,24 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff1ff' }}>
+      <Text style={{ fontSize: 30 }}>Home Screen</Text>
     </View>
   );
 }
 
-function SettingsScreen() {
+function ProfileScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff1ff' }}>
+      <Text style={{ fontSize: 30 }}>Profile Screen</Text>
+    </View>
+  );
+}
+
+function SettingScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff1ff' }}>
+      <Text style={{ fontSize: 30 }}>Setting Screen</Text>
     </View>
   );
 }
@@ -24,9 +32,15 @@ const Tab = createMaterialTopTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator tabBarOptions={{ 
+        labelStyle: { fontSize: 12 }, 
+        tabStyle: { height : 50 }, 
+        style: { backgroundColor: '#e6ceff' },
+        }}
+      >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Setting" component={SettingScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
